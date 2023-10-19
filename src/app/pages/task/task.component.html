@@ -1,0 +1,22 @@
+<form (submit)="submit($event)">
+  <h3>Edit task</h3>
+
+  <div class="inputs_container">
+    <input
+      value="{{ task.name }}"
+      placeholder="Name"
+      type="text"
+      name="name"
+      id="name"
+    />
+    <input
+      placeholder="Description"
+      type="text"
+      name="description"
+      id="description"
+      value="{{ task.description }}"
+    />
+  </div>
+
+  <button class="btn_submit" type="submit">Edit</button>
+</form>

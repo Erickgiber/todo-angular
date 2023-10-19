@@ -1,0 +1,58 @@
+#dashboard {
+  width: calc(100% - 20px);
+  padding: 20px;
+  max-width: 530px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-top: 20px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#dashboard ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#dashboard ul li {
+  display: flex;
+  font-size: 17px;
+}
+
+#dashboard b {
+  width: 20px;
+}
+
+#dashboard .description {
+  color: gray;
+  font-size: 15px;
+}
+
+#dashboard button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}
+
+#dashboard .info .name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
