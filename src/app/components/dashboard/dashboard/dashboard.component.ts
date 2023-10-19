@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Title } from '@angular/platform-browser'
 import { ItemsService } from 'src/app/shared/Items.service'
 import { TypeItem } from 'src/types/item.types'
 
@@ -10,7 +11,9 @@ import { TypeItem } from 'src/types/item.types'
 export class DashboardComponent implements OnInit {
   tasks: TypeItem[] = [] as TypeItem[]
 
-  constructor(private itemsShared: ItemsService) {}
+  constructor(private itemsShared: ItemsService, title: Title) {
+    title.setTitle('TODO LIST')
+  }
 
   ngOnInit() {
     const loadTasks = () => {

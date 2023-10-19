@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Title } from '@angular/platform-browser'
 import { ActivatedRoute, Router } from '@angular/router'
 import { TypeItem } from 'src/types/item.types'
 
@@ -8,9 +9,13 @@ import { TypeItem } from 'src/types/item.types'
   styleUrls: ['./task.component.css'],
 })
 export class TaskView implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute) {}
   task = {} as TypeItem
   taskId = ''
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private title: Title
+  ) {}
 
   submit(event: SubmitEvent) {
     event.preventDefault()
@@ -50,6 +55,7 @@ export class TaskView implements OnInit {
         const task = this.getItems().find((item) => item.id === taskid)
         if (task) {
           this.task = task
+          this.title.setTitle(`${task.name} - TODO LIST`)
         }
       }
     })
